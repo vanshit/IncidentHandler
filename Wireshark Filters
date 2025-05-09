@@ -19,5 +19,7 @@ nbns or smb or smb2
 To Get the USer Account Name
 kerberos.CNameString
 
-To Get 
+To Get a specific file type : 
+http.content_type contains "file-extention"
+Eg : 
 http.content_type contains "zip"
