@@ -1,0 +1,23 @@
+Wireshark Filters
+
+http.request or tls.handshake.type eq 1
+(http.request or tls.handshake.type eq 1) and !(ssdp)
+
+
+http.request:
+This part of the filter looks for packets that Wireshark has identified as HTTP requests.
+This means it will capture packets that contain the structure and fields of an HTTP request (e.g., GET, POST, headers, etc.).
+This is useful for analyzing web traffic.
+tls.handshake.type eq 1:
+tls.handshake.type: This refers to the "Handshake Type" field within the TLS (Transport Layer Security) protocol.
+eq 1: This means "equals 1".
+
+
+To Get The Hostname Related Information
+nbns or smb or smb2
+
+To Get the USer Account Name
+kerberos.CNameString
+
+To Get 
+http.content_type contains "zip"
