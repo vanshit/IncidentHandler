@@ -1,0 +1,15 @@
+Installing NAMP : 
+Linux 
+sudo apt-get update
+sudo apt-get install nmap
+
+
+Windows : 
+https://nmap.org/dist/nmap-7.95-setup.exe 
+
+
+On Victim
+ncat -l -v -p 8080 -c "echo 'HTTP/1.1 200 OK\r\n\r\n'; cat /dev/urandom"
+
+On Attacker
+nmap -p- -sN <target-ip> 
